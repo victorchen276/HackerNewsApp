@@ -1,0 +1,20 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '13.0'
+
+target 'HackerNewApp' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for HackerNewApp
+  pod 'Alamofire'
+
+  target 'HackerNewAppTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'HackerNewAppUITests' do
+    # Pods for testing
+  end
+
+end
