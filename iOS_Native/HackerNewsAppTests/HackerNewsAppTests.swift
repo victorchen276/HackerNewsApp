@@ -1,15 +1,15 @@
 //
-//  HackerNewAppTests.swift
-//  HackerNewAppTests
+//  HackerNewsAppTests.swift
+//  HackerNewsAppTests
 //
 //  Created by Victor Chen on 29/10/19.
 //  Copyright © 2019 Victor Chen. All rights reserved.
 //
 
 import XCTest
-@testable import HackerNewApp
+@testable import HackerNewsApp
 
-class HackerNewAppTests: XCTestCase {
+class HackerNewsAppTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
