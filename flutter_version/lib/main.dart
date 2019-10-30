@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 
+import 'package:http/http.dart' as http;
+import 'dart:developer';
+import 'package:flutter_version/DetailScreen.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -21,7 +25,7 @@ class RandomWordsState extends State<RandomWords> {
   Widget build(BuildContext contect) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Startup Name Generator'),
+        title: Text('Hacker News'),
       ),
       body: _buildSuggestions(),
 
@@ -31,6 +35,7 @@ class RandomWordsState extends State<RandomWords> {
   Widget _buildSuggestions() {
     return ListView.builder(
         padding: const EdgeInsets.all(16.0),
+//        itemCount: 10,
         itemBuilder:  (context, i) {
           if (i.isOdd) return Divider();
 
@@ -48,6 +53,15 @@ class RandomWordsState extends State<RandomWords> {
         pair.asPascalCase,
         style: _biggerFont,
       ),
+      onTap: () {
+//        log('aaaaa');
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => DetailScreen(),
+          ),
+        );
+      }
     );
   }
 }
