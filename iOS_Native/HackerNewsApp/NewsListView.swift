@@ -11,19 +11,27 @@ import SwiftUI
 struct NewsListView: View {
 
     
-    var apistring = HackerNewsAPI.TOPSTORIES
     
+    
+    @ObservedObject var viewModel = NewsListViewModel()
     var body: some View {
-        
-        NavigationView {
-            List(){
-                Text(apistring)
-                Text("Hello World")
-                Text("Hello World")
-            }
-            .navigationBarTitle(Text("News"))
+        List(viewModel.posts) { post in
+            Text(post.title)
+            
         }
     }
+    
+//    var body: some View {
+//
+//        NavigationView {
+//            List(){
+//                Text(apistring)
+//                Text("Hello World")
+//                Text("Hello World")
+//            }
+//            .navigationBarTitle(Text("News"))
+//        }
+//    }
 }
 
 struct NewsListView_Previews: PreviewProvider {
