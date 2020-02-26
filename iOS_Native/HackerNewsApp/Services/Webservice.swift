@@ -8,10 +8,9 @@
 
 import Foundation
 
-class Webservice {
+public class Webservice {
     func getAllPosts(completion: @escaping ([News]) -> ()) {
         let apistring = HackerNewsAPI.TOPSTORIES
-//        guard let url = URL(string:"https://jsonplaceholder.typicode.com/posts") else {
         guard let url = URL(string:apistring) else {
                 fatalError("URL is not correct!")
         }
@@ -19,19 +18,10 @@ class Webservice {
             guard let recvData = data else{
                 fatalError("no data recv!")
             }
-            let jsonObject : Any = try! JSONSerialization.jsonObject(with: recvData, options: [])
-            print(jsonObject)
-            for data in jsonObject as! [Int] {
-                print(data)
-            }
-//            let jsonArray = jsonObject as NSArray
-//            print(jsonArray)
-//            let newsIdArray = try! JSONSerialization.jsonObject(with: recvData, options: JSONSerialization.ReadingOptions()) as? [Any]
-//            print(newsIdArray)
-            
-//            let posts = try! JSONDecoder().decode([News].self, from:data!)
-//            DispatchQueue.main.async {
-//                 completion(posts)
+//            let jsonObject : Any = try! JSONSerialization.jsonObject(with: recvData, options: [])
+//            print(jsonObject)
+//            for data in jsonObject as! [Int] {
+//                print(data)
 //            }
         }.resume()
     }

@@ -7,6 +7,7 @@ target 'HackerNewsApp' do
 
   # Pods for HackerNewsApp
   pod 'Alamofire'
+  pod 'HNScraper', '~> 0.2.1'
 
   target 'HackerNewsAppTests' do
     inherit! :search_paths

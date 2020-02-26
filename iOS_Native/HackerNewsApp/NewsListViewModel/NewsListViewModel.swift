@@ -29,7 +29,6 @@ final class NewsListViewModel: ObservableObject{
     
     private func fetchPosts() {
         Webservice().getAllPosts{
-//            print($0)
             self.posts = $0
             print(self.posts)
         }

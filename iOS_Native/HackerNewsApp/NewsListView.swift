@@ -9,10 +9,6 @@
 import SwiftUI
 
 struct NewsListView: View {
-
-    
-    
-    
     @ObservedObject var viewModel = NewsListViewModel()
     var body: some View {
         List(viewModel.posts) { post in
@@ -20,18 +16,6 @@ struct NewsListView: View {
             
         }
     }
-    
-//    var body: some View {
-//
-//        NavigationView {
-//            List(){
-//                Text(apistring)
-//                Text("Hello World")
-//                Text("Hello World")
-//            }
-//            .navigationBarTitle(Text("News"))
-//        }
-//    }
 }
 
 struct NewsListView_Previews: PreviewProvider {
