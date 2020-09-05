@@ -14,6 +14,7 @@ struct NewsListView: View {
         List(viewModel.posts) { post in
             Text(post.title)
             
+            
         }
     }
 }
