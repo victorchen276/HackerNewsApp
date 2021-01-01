@@ -15,9 +15,9 @@ public class Webservice {
                 fatalError("URL is not correct!")
         }
         URLSession.shared.dataTask(with: url) { data, _, _ in
-            guard let recvData = data else{
-                fatalError("no data recv!")
-            }
+//            guard let recvData = data else{
+//                fatalError("no data recv!")
+//            }
 //            let jsonObject : Any = try! JSONSerialization.jsonObject(with: recvData, options: [])
 //            print(jsonObject)
 //            for data in jsonObject as! [Int] {
